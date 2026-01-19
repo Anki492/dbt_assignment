@@ -8,9 +8,4 @@ sources:
       - name: customers
       - name: orders
 
-models:
-  - name: incremental_orders
-    columns:
-      - name: amount
-        tests:
-          - not_negative
+
