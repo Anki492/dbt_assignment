@@ -1,8 +1,0 @@
-version: 2
-
-models:
-  - name: customers_with_country
-    columns:
-      - name: customer_name
-        data_tests:
-          - not_null_string
