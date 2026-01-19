@@ -1,3 +1,7 @@
-select amount
-from {{ ref('incremental_orders') }}
-where amount<0
+{% test not_negative(model, column_name) %}
+
+select *
+from {{ model }}
+where {{ column_name }} < 0
+
+{% endtest %}
