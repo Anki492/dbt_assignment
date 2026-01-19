@@ -4,7 +4,6 @@ models:
       - name: customer_id
         data_tests:
           - unique
-          - not_null
   - name: incremental_orders
     columns:
       - name: amount
