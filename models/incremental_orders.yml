@@ -6,3 +6,4 @@ models:
       - name: amount
         tests:
           - not_negative
+
