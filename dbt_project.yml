@@ -42,6 +42,5 @@ models:
       +materialized: table
 
 seeds:
-  dbt_project:
-    country_codes:
-      +schema: RAW
+  dbt_assignment:
+    +schema: RAW
