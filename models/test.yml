@@ -9,4 +9,4 @@ models:
     columns:
       - name: amount
         data_tests:
-          - not_null
+          - unique
