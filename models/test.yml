@@ -10,6 +10,5 @@ models:
       - name: amount
         tests:
           - unique
-          - positive:      # strictly > 0
-              allow_zero: false
+          - positive
 
