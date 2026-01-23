@@ -10,4 +10,6 @@ models:
       - name: amount
         data_tests:
           - unique
-          - positive
+          - positive:      # strictly > 0
+              allow_zero: false
+

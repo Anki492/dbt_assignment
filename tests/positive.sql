@@ -1,9 +1,16 @@
 
-{% test positive_value(model, column_name) %}
--- Fails when the column is NOT strictly greater than zero.
--- Nulls are ignored here; use a separate `not_null` test if needed.
+
+{% test positive(model, column_name, allow_zero=false) %}
+-- Fails if column is not strictly positive.
+-- Set allow_zero=true to allow non-negative values (>= 0).
+{% if allow_zero %}
+  {% set op = '<' %}
+{% else %}
+  {% set op = '<=' %}
+{% endif %}
+
 select *
 from {{ model }}
 where {{ column_name }} is not null
-  and {{ column_name }} <= 0
+  and {{ column_name }} {{ op }} 0
 {% endtest %}
