@@ -10,5 +10,7 @@ models:
       - name: amount
         tests:
           - unique
-          - positive
+          - positive:          # <— matches the macro name above
+              allow_zero: false
+
 
