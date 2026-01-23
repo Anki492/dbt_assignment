@@ -10,3 +10,4 @@ models:
       - name: amount
         data_tests:
           - unique
+          - positive
