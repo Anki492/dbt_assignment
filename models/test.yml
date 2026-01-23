@@ -2,13 +2,13 @@ models:
   - name: ephemeral_customers
     columns:
       - name: customer_id
-        data_tests:
+        tests:
           - unique
 
   - name: incremental_orders
     columns:
       - name: amount
-        data_tests:
+        tests:
           - unique
           - positive:      # strictly > 0
               allow_zero: false
